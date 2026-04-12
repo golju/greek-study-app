@@ -60,6 +60,13 @@ class TrainTab(QWidget):
         self.answer.setPlaceholderText("Ответ скрыт — нажмите Space")
         layout.addWidget(self.answer)
 
+        self.notes = QTextEdit()
+        self.notes.setReadOnly(True)
+        self.notes.setPlaceholderText("Краткое пояснение (если заполнено в карточке)")
+        self.notes.setMaximumHeight(110)
+        self.notes.hide()
+        layout.addWidget(self.notes)
+
         self.mcq_frame = QFrame()
         mcq_layout = QVBoxLayout(self.mcq_frame)
         self.mcq_buttons: list[QPushButton] = []
@@ -151,6 +158,8 @@ class TrainTab(QWidget):
         self.answer_visible = False
         self.answer.clear()
         self.answer.setPlaceholderText("Ответ скрыт — нажмите Space")
+        self.notes.clear()
+        self.notes.hide()
         self.current_card = None
         self.current_schedule = None
 
@@ -248,9 +257,15 @@ class TrainTab(QWidget):
         if self.answer_visible:
             self.answer.setPlainText(card.back or "")
             self.answer.setPlaceholderText("")
+            if card.explanation:
+                self.notes.setPlainText(card.explanation)
+                self.notes.show()
+            else:
+                self.notes.hide()
         else:
             self.answer.clear()
             self.answer.setPlaceholderText("Ответ скрыт — нажмите Space")
+            self.notes.hide()
 
     def _grade(self, grade: Grade) -> None:
         if not self.current_card or not self.current_schedule:

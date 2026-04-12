@@ -49,17 +49,25 @@ class EditCardDialog(QDialog):
         self.front.setPlainText(card.front)
         self.back = QTextEdit()
         self.back.setPlainText(card.back or "")
+        self.explanation = QTextEdit()
+        self.explanation.setPlainText(card.explanation or "")
         self.tags = QLineEdit(card.tags or "")
         layout.addRow("Лицевая сторона", self.front)
         layout.addRow("Оборот", self.back)
+        layout.addRow("Пояснение после ответа", self.explanation)
         layout.addRow("Теги", self.tags)
         buttons = QDialogButtonBox(QDialogButtonBox.Save | QDialogButtonBox.Cancel)
         buttons.accepted.connect(self.accept)
         buttons.rejected.connect(self.reject)
         layout.addRow(buttons)
 
-    def values(self) -> tuple[str, str, str]:
-        return self.front.toPlainText().strip(), self.back.toPlainText().strip(), self.tags.text().strip()
+    def values(self) -> tuple[str, str, str, str]:
+        return (
+            self.front.toPlainText().strip(),
+            self.back.toPlainText().strip(),
+            self.explanation.toPlainText().strip(),
+            self.tags.text().strip(),
+        )
 
 
 class LibraryTab(QWidget):
@@ -166,9 +174,10 @@ class LibraryTab(QWidget):
             dlg = EditCardDialog(card, self)
             if dlg.exec() != QDialog.Accepted:
                 return
-            front, back, tags = dlg.values()
+            front, back, explanation, tags = dlg.values()
             card.front = front
             card.back = back
+            card.explanation = explanation or None
             card.tags = tags
             session.commit()
         except Exception as exc:  # noqa: BLE001

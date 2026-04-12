@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "greek-study-app"
+version = "0.1.0"
+description = "Offline Modern Greek study desktop app (PySide6 + SQLite + Tesseract)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  # Essentials-only keeps installs smaller than the full `PySide6` meta-package.
+  "PySide6-Essentials==6.8.1.1",
+  "Pillow>=10.0,<13",
+  "pytesseract>=0.3.10,<0.4",
+  "SQLAlchemy>=2.0.25,<2.1",
+  "pydantic>=2.5,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0,<9"]
+
+[project.scripts]
+greek-study = "greek_study.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

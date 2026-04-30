@@ -1,0 +1,1980 @@
+[
+  {
+    "id": "agapao",
+    "verb": "αγαπάω",
+    "translation": "любить",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "αγάπησα",
+        "present": "αγαπάω",
+        "future": "θα αγαπήσω"
+      },
+      {
+        "person": "2sg",
+        "past": "αγάπησες",
+        "present": "αγαπάς",
+        "future": "θα αγαπήσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "αγάπησε",
+        "present": "αγαπάει",
+        "future": "θα αγαπήσει"
+      },
+      {
+        "person": "1pl",
+        "past": "αγαπήσαμε",
+        "present": "αγαπάμε",
+        "future": "θα αγαπήσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "αγαπήσατε",
+        "present": "αγαπάτε",
+        "future": "θα αγαπήσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "αγάπησαν",
+        "present": "αγαπάνε",
+        "future": "θα αγαπήσουν"
+      }
+    ]
+  },
+  {
+    "id": "agorazo",
+    "verb": "αγοράζω",
+    "translation": "покупать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "αγόρασα",
+        "present": "αγοράζω",
+        "future": "θα αγοράσω"
+      },
+      {
+        "person": "2sg",
+        "past": "αγόρασες",
+        "present": "αγοράζεις",
+        "future": "θα αγοράσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "αγόρασε",
+        "present": "αγοράζει",
+        "future": "θα αγοράσει"
+      },
+      {
+        "person": "1pl",
+        "past": "αγοράσαμε",
+        "present": "αγοράζουμε",
+        "future": "θα αγοράσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "αγοράσατε",
+        "present": "αγοράζετε",
+        "future": "θα αγοράσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "αγόρασαν",
+        "present": "αγοράζουν",
+        "future": "θα αγοράσουν"
+      }
+    ]
+  },
+  {
+    "id": "akoyo",
+    "verb": "ακούω",
+    "translation": "слышать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "άκουσα",
+        "present": "ακούω",
+        "future": "θα ακούσω"
+      },
+      {
+        "person": "2sg",
+        "past": "άκουσες",
+        "present": "ακούς",
+        "future": "θα ακούσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "άκουσε",
+        "present": "ακούει",
+        "future": "θα ακούσει"
+      },
+      {
+        "person": "1pl",
+        "past": "ακούσαμε",
+        "present": "ακούμε",
+        "future": "θα ακούσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "ακούσατε",
+        "present": "ακούτε",
+        "future": "θα ακούσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "άκουσαν",
+        "present": "ακούνε",
+        "future": "θα ακούσουν"
+      }
+    ]
+  },
+  {
+    "id": "anisycho",
+    "verb": "ανησυχώ",
+    "translation": "беспокоиться",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "ανησύχησα",
+        "present": "ανησυχώ",
+        "future": "θα ανησυχήσω"
+      },
+      {
+        "person": "2sg",
+        "past": "ανησύχησες",
+        "present": "ανησυχείς",
+        "future": "θα ανησυχήσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "ανησύχησε",
+        "present": "ανησυχεί",
+        "future": "θα ανησυχήσει"
+      },
+      {
+        "person": "1pl",
+        "past": "ανησυχήσαμε",
+        "present": "ανησυχούμε",
+        "future": "θα ανησυχήσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "ανησυχήσατε",
+        "present": "ανησυχείτε",
+        "future": "θα ανησυχήσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "ανησύχησαν",
+        "present": "ανησυχούν",
+        "future": "θα ανησυχήσουν"
+      }
+    ]
+  },
+  {
+    "id": "archizo",
+    "verb": "αρχίζω",
+    "translation": "начинать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "άρχισα",
+        "present": "αρχίζω",
+        "future": "θα αρχίσω"
+      },
+      {
+        "person": "2sg",
+        "past": "άρχισες",
+        "present": "αρχίζεις",
+        "future": "θα αρχίσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "άρχισε",
+        "present": "αρχίζει",
+        "future": "θα αρχίσει"
+      },
+      {
+        "person": "1pl",
+        "past": "αρχίσαμε",
+        "present": "αρχίζουμε",
+        "future": "θα αρχίσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "αρχίσατε",
+        "present": "αρχίζετε",
+        "future": "θα αρχίσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "άρχισαν",
+        "present": "αρχίζουν",
+        "future": "θα αρχίσουν"
+      }
+    ]
+  },
+  {
+    "id": "vgazo",
+    "verb": "βγάζω",
+    "translation": "вынимать, снимать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "έβγαλα",
+        "present": "βγάζω",
+        "future": "θα βγάλω"
+      },
+      {
+        "person": "2sg",
+        "past": "έβγαλες",
+        "present": "βγάζεις",
+        "future": "θα βγάλεις"
+      },
+      {
+        "person": "3sg",
+        "past": "έβγαλε",
+        "present": "βγάζει",
+        "future": "θα βγάλει"
+      },
+      {
+        "person": "1pl",
+        "past": "βγάλαμε",
+        "present": "βγάζουμε",
+        "future": "θα βγάλουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "βγάλατε",
+        "present": "βγάζετε",
+        "future": "θα βγάλετε"
+      },
+      {
+        "person": "3pl",
+        "past": "έβγαλαν",
+        "present": "βγάζουν",
+        "future": "θα βγάλουν"
+      }
+    ]
+  },
+  {
+    "id": "vlepo",
+    "verb": "βλέπω",
+    "translation": "видеть",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "είδα",
+        "present": "βλέπω",
+        "future": "θα δω"
+      },
+      {
+        "person": "2sg",
+        "past": "είδες",
+        "present": "βλέπεις",
+        "future": "θα δεις"
+      },
+      {
+        "person": "3sg",
+        "past": "είδε",
+        "present": "βλέπει",
+        "future": "θα δει"
+      },
+      {
+        "person": "1pl",
+        "past": "είδαμε",
+        "present": "βλέπουμε",
+        "future": "θα δούμε"
+      },
+      {
+        "person": "2pl",
+        "past": "είδατε",
+        "present": "βλέπετε",
+        "future": "θα δείτε"
+      },
+      {
+        "person": "3pl",
+        "past": "είδαν",
+        "present": "βλέπουν",
+        "future": "θα δουν"
+      }
+    ]
+  },
+  {
+    "id": "vriskomai",
+    "verb": "βρίσκομαι",
+    "translation": "находиться",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "βρέθηκα",
+        "present": "βρίσκομαι",
+        "future": "θα βρεθώ"
+      },
+      {
+        "person": "2sg",
+        "past": "βρέθηκες",
+        "present": "βρίσκεσαι",
+        "future": "θα βρεθείς"
+      },
+      {
+        "person": "3sg",
+        "past": "βρέθηκε",
+        "present": "βρίσκεται",
+        "future": "θα βρεθεί"
+      },
+      {
+        "person": "1pl",
+        "past": "βρεθήκαμε",
+        "present": "βρισκόμαστε",
+        "future": "θα βρεθούμε"
+      },
+      {
+        "person": "2pl",
+        "past": "βρεθήκατε",
+        "present": "βρίσκεστε",
+        "future": "θα βρεθείτε"
+      },
+      {
+        "person": "3pl",
+        "past": "βρέθηκαν",
+        "present": "βρίσκονται",
+        "future": "θα βρεθούν"
+      }
+    ]
+  },
+  {
+    "id": "grafo",
+    "verb": "γράφω",
+    "translation": "писать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "έγραψα",
+        "present": "γράφω",
+        "future": "θα γράψω"
+      },
+      {
+        "person": "2sg",
+        "past": "έγραψες",
+        "present": "γράφεις",
+        "future": "θα γράψεις"
+      },
+      {
+        "person": "3sg",
+        "past": "έγραψε",
+        "present": "γράφει",
+        "future": "θα γράψει"
+      },
+      {
+        "person": "1pl",
+        "past": "γράψαμε",
+        "present": "γράφουμε",
+        "future": "θα γράψουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "γράψατε",
+        "present": "γράφετε",
+        "future": "θα γράψετε"
+      },
+      {
+        "person": "3pl",
+        "past": "έγραψαν",
+        "present": "γράφουν",
+        "future": "θα γράψουν"
+      }
+    ]
+  },
+  {
+    "id": "gyrizo",
+    "verb": "γυρίζω",
+    "translation": "поворачивать, возвращаться",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "γύρισα",
+        "present": "γυρίζω",
+        "future": "θα γυρίσω"
+      },
+      {
+        "person": "2sg",
+        "past": "γύρισες",
+        "present": "γυρίζεις",
+        "future": "θα γυρίσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "γύρισε",
+        "present": "γυρίζει",
+        "future": "θα γυρίσει"
+      },
+      {
+        "person": "1pl",
+        "past": "γυρίσαμε",
+        "present": "γυρίζουμε",
+        "future": "θα γυρίσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "γυρίσατε",
+        "present": "γυρίζετε",
+        "future": "θα γυρίσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "γύρισαν",
+        "present": "γυρίζουν",
+        "future": "θα γυρίσουν"
+      }
+    ]
+  },
+  {
+    "id": "diavazo",
+    "verb": "διαβάζω",
+    "translation": "читать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "διάβασα",
+        "present": "διαβάζω",
+        "future": "θα διαβάσω"
+      },
+      {
+        "person": "2sg",
+        "past": "διάβασες",
+        "present": "διαβάζεις",
+        "future": "θα διαβάσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "διάβασε",
+        "present": "διαβάζει",
+        "future": "θα διαβάσει"
+      },
+      {
+        "person": "1pl",
+        "past": "διαβάσαμε",
+        "present": "διαβάζουμε",
+        "future": "θα διαβάσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "διαβάσατε",
+        "present": "διαβάζετε",
+        "future": "θα διαβάσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "διάβασαν",
+        "present": "διαβάζουν",
+        "future": "θα διαβάσουν"
+      }
+    ]
+  },
+  {
+    "id": "dino",
+    "verb": "δίνω",
+    "translation": "давать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "έδωσα",
+        "present": "δίνω",
+        "future": "θα δώσω"
+      },
+      {
+        "person": "2sg",
+        "past": "έδωσες",
+        "present": "δίνεις",
+        "future": "θα δώσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "έδωσε",
+        "present": "δίνει",
+        "future": "θα δώσει"
+      },
+      {
+        "person": "1pl",
+        "past": "δώσαμε",
+        "present": "δίνουμε",
+        "future": "θα δώσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "δώσατε",
+        "present": "δίνετε",
+        "future": "θα δώσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "έδωσαν",
+        "present": "δίνουν",
+        "future": "θα δώσουν"
+      }
+    ]
+  },
+  {
+    "id": "doyleyo",
+    "verb": "δουλεύω",
+    "translation": "работать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "δούλεψα",
+        "present": "δουλεύω",
+        "future": "θα δουλέψω"
+      },
+      {
+        "person": "2sg",
+        "past": "δούλεψες",
+        "present": "δουλεύεις",
+        "future": "θα δουλέψεις"
+      },
+      {
+        "person": "3sg",
+        "past": "δούλεψε",
+        "present": "δουλεύει",
+        "future": "θα δουλέψει"
+      },
+      {
+        "person": "1pl",
+        "past": "δουλέψαμε",
+        "present": "δουλεύουμε",
+        "future": "θα δουλέψουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "δουλέψατε",
+        "present": "δουλεύετε",
+        "future": "θα δουλέψετε"
+      },
+      {
+        "person": "3pl",
+        "past": "δούλεψαν",
+        "present": "δουλεύουν",
+        "future": "θα δουλέψουν"
+      }
+    ]
+  },
+  {
+    "id": "eimai",
+    "verb": "είμαι",
+    "translation": "быть",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "ήμουν(α)",
+        "present": "είμαι",
+        "future": "θα είμαι"
+      },
+      {
+        "person": "2sg",
+        "past": "ήσουν(α)",
+        "present": "είσαι",
+        "future": "θα είσαι"
+      },
+      {
+        "person": "3sg",
+        "past": "ήταν(ε)",
+        "present": "είναι",
+        "future": "θα είναι"
+      },
+      {
+        "person": "1pl",
+        "past": "ήμασταν / ήμαστε",
+        "present": "είμαστε",
+        "future": "θα είμαστε"
+      },
+      {
+        "person": "2pl",
+        "past": "ήσασταν / ήσαστε",
+        "present": "είστε",
+        "future": "θα είστε"
+      },
+      {
+        "person": "3pl",
+        "past": "ήταν(ε)",
+        "present": "είναι",
+        "future": "θα είναι"
+      }
+    ]
+  },
+  {
+    "id": "echo",
+    "verb": "έχω",
+    "translation": "иметь",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "είχα",
+        "present": "έχω",
+        "future": "θα έχω"
+      },
+      {
+        "person": "2sg",
+        "past": "είχες",
+        "present": "έχεις",
+        "future": "θα έχεις"
+      },
+      {
+        "person": "3sg",
+        "past": "είχε",
+        "present": "έχει",
+        "future": "θα έχει"
+      },
+      {
+        "person": "1pl",
+        "past": "είχαμε",
+        "present": "έχουμε",
+        "future": "θα έχουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "είχατε",
+        "present": "έχετε",
+        "future": "θα έχετε"
+      },
+      {
+        "person": "3pl",
+        "past": "είχαν",
+        "present": "έχουν",
+        "future": "θα έχουν"
+      }
+    ]
+  },
+  {
+    "id": "thelo",
+    "verb": "θέλω",
+    "translation": "хотеть",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "ήθελα",
+        "present": "θέλω",
+        "future": "θα θέλω"
+      },
+      {
+        "person": "2sg",
+        "past": "ήθελες",
+        "present": "θέλεις",
+        "future": "θα θέλεις"
+      },
+      {
+        "person": "3sg",
+        "past": "ήθελε",
+        "present": "θέλει",
+        "future": "θα θέλει"
+      },
+      {
+        "person": "1pl",
+        "past": "θέλαμε",
+        "present": "θέλουμε",
+        "future": "θα θέλουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "θέλατε",
+        "present": "θέλετε",
+        "future": "θα θέλετε"
+      },
+      {
+        "person": "3pl",
+        "past": "ήθελαν",
+        "present": "θέλουν",
+        "future": "θα θέλουν"
+      }
+    ]
+  },
+  {
+    "id": "thymamai",
+    "verb": "θυμάμαι",
+    "translation": "помнить",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "θυμήθηκα",
+        "present": "θυμάμαι",
+        "future": "θα θυμηθώ"
+      },
+      {
+        "person": "2sg",
+        "past": "θυμήθηκες",
+        "present": "θυμάσαι",
+        "future": "θα θυμηθείς"
+      },
+      {
+        "person": "3sg",
+        "past": "θυμήθηκε",
+        "present": "θυμάται",
+        "future": "θα θυμηθεί"
+      },
+      {
+        "person": "1pl",
+        "past": "θυμηθήκαμε",
+        "present": "θυμόμαστε",
+        "future": "θα θυμηθούμε"
+      },
+      {
+        "person": "2pl",
+        "past": "θυμηθήκατε",
+        "present": "θυμάστε",
+        "future": "θα θυμηθείτε"
+      },
+      {
+        "person": "3pl",
+        "past": "θυμήθηκαν",
+        "present": "θυμούνται",
+        "future": "θα θυμηθούν"
+      }
+    ]
+  },
+  {
+    "id": "kano",
+    "verb": "κάνω",
+    "translation": "делать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "έκανα",
+        "present": "κάνω",
+        "future": "θα κάνω"
+      },
+      {
+        "person": "2sg",
+        "past": "έκανες",
+        "present": "κάνεις",
+        "future": "θα κάνεις"
+      },
+      {
+        "person": "3sg",
+        "past": "έκανε",
+        "present": "κάνει",
+        "future": "θα κάνει"
+      },
+      {
+        "person": "1pl",
+        "past": "κάναμε",
+        "present": "κάνουμε",
+        "future": "θα κάνουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "κάνατε",
+        "present": "κάνετε",
+        "future": "θα κάνετε"
+      },
+      {
+        "person": "3pl",
+        "past": "έκαναν",
+        "present": "κάνουν",
+        "future": "θα κάνουν"
+      }
+    ]
+  },
+  {
+    "id": "katalavaino",
+    "verb": "καταλαβαίνω",
+    "translation": "понимать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "κατάλαβα",
+        "present": "καταλαβαίνω",
+        "future": "θα καταλάβω"
+      },
+      {
+        "person": "2sg",
+        "past": "κατάλαβες",
+        "present": "καταλαβαίνεις",
+        "future": "θα καταλάβεις"
+      },
+      {
+        "person": "3sg",
+        "past": "κατάλαβε",
+        "present": "καταλαβαίνει",
+        "future": "θα καταλάβει"
+      },
+      {
+        "person": "1pl",
+        "past": "καταλάβαμε",
+        "present": "καταλαβαίνουμε",
+        "future": "θα καταλάβουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "καταλάβατε",
+        "present": "καταλαβαίνετε",
+        "future": "θα καταλάβετε"
+      },
+      {
+        "person": "3pl",
+        "past": "κατάλαβαν",
+        "present": "καταλαβαίνουν",
+        "future": "θα καταλάβουν"
+      }
+    ]
+  },
+  {
+    "id": "kleino",
+    "verb": "κλείνω",
+    "translation": "закрывать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "έκλεισα",
+        "present": "κλείνω",
+        "future": "θα κλείσω"
+      },
+      {
+        "person": "2sg",
+        "past": "έκλεισες",
+        "present": "κλείνεις",
+        "future": "θα κλείσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "έκλεισε",
+        "present": "κλείνει",
+        "future": "θα κλείσει"
+      },
+      {
+        "person": "1pl",
+        "past": "κλείσαμε",
+        "present": "κλείνουμε",
+        "future": "θα κλείσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "κλείσατε",
+        "present": "κλείνετε",
+        "future": "θα κλείσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "έκλεισαν",
+        "present": "κλείνουν",
+        "future": "θα κλείσουν"
+      }
+    ]
+  },
+  {
+    "id": "leo",
+    "verb": "λέω",
+    "translation": "говорить",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "είπα",
+        "present": "λέω",
+        "future": "θα πω"
+      },
+      {
+        "person": "2sg",
+        "past": "είπες",
+        "present": "λες",
+        "future": "θα πεις"
+      },
+      {
+        "person": "3sg",
+        "past": "είπε",
+        "present": "λέει",
+        "future": "θα πει"
+      },
+      {
+        "person": "1pl",
+        "past": "είπαμε",
+        "present": "λέμε",
+        "future": "θα πούμε"
+      },
+      {
+        "person": "2pl",
+        "past": "είπατε",
+        "present": "λέτε",
+        "future": "θα πείτε"
+      },
+      {
+        "person": "3pl",
+        "past": "είπαν",
+        "present": "λένε",
+        "future": "θα πουν"
+      }
+    ]
+  },
+  {
+    "id": "mageireyo",
+    "verb": "μαγειρεύω",
+    "translation": "готовить",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "μαγείρεψα",
+        "present": "μαγειρεύω",
+        "future": "θα μαγειρέψω"
+      },
+      {
+        "person": "2sg",
+        "past": "μαγείρεψες",
+        "present": "μαγειρεύεις",
+        "future": "θα μαγειρέψεις"
+      },
+      {
+        "person": "3sg",
+        "past": "μαγείρεψε",
+        "present": "μαγειρεύει",
+        "future": "θα μαγειρέψει"
+      },
+      {
+        "person": "1pl",
+        "past": "μαγειρέψαμε",
+        "present": "μαγειρεύουμε",
+        "future": "θα μαγειρέψουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "μαγειρέψατε",
+        "present": "μαγειρεύετε",
+        "future": "θα μαγειρέψετε"
+      },
+      {
+        "person": "3pl",
+        "past": "μαγείρεψαν",
+        "present": "μαγειρεύουν",
+        "future": "θα μαγειρέψουν"
+      }
+    ]
+  },
+  {
+    "id": "mazeyo",
+    "verb": "μαζεύω",
+    "translation": "собирать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "μάζεψα",
+        "present": "μαζεύω",
+        "future": "θα μαζέψω"
+      },
+      {
+        "person": "2sg",
+        "past": "μάζεψες",
+        "present": "μαζεύεις",
+        "future": "θα μαζέψεις"
+      },
+      {
+        "person": "3sg",
+        "past": "μάζεψε",
+        "present": "μαζεύει",
+        "future": "θα μαζέψει"
+      },
+      {
+        "person": "1pl",
+        "past": "μαζέψαμε",
+        "present": "μαζεύουμε",
+        "future": "θα μαζέψουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "μαζέψατε",
+        "present": "μαζεύετε",
+        "future": "θα μαζέψετε"
+      },
+      {
+        "person": "3pl",
+        "past": "μάζεψαν",
+        "present": "μαζεύουν",
+        "future": "θα μαζέψουν"
+      }
+    ]
+  },
+  {
+    "id": "meno",
+    "verb": "μένω",
+    "translation": "оставаться",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "έμεινα",
+        "present": "μένω",
+        "future": "θα μείνω"
+      },
+      {
+        "person": "2sg",
+        "past": "έμεινες",
+        "present": "μένεις",
+        "future": "θα μείνεις"
+      },
+      {
+        "person": "3sg",
+        "past": "έμεινε",
+        "present": "μένει",
+        "future": "θα μείνει"
+      },
+      {
+        "person": "1pl",
+        "past": "μείναμε",
+        "present": "μένουμε",
+        "future": "θα μείνουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "μείνατε",
+        "present": "μένετε",
+        "future": "θα μείνετε"
+      },
+      {
+        "person": "3pl",
+        "past": "έμειναν",
+        "present": "μένουν",
+        "future": "θα μείνουν"
+      }
+    ]
+  },
+  {
+    "id": "nomizo",
+    "verb": "νομίζω",
+    "translation": "думать, считать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "νόμισα",
+        "present": "νομίζω",
+        "future": "θα νομίσω"
+      },
+      {
+        "person": "2sg",
+        "past": "νόμισες",
+        "present": "νομίζεις",
+        "future": "θα νομίσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "νόμισε",
+        "present": "νομίζει",
+        "future": "θα νομίσει"
+      },
+      {
+        "person": "1pl",
+        "past": "νομίσαμε",
+        "present": "νομίζουμε",
+        "future": "θα νομίσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "νομίσατε",
+        "present": "νομίζετε",
+        "future": "θα νομίσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "νόμισαν",
+        "present": "νομίζουν",
+        "future": "θα νομίσουν"
+      }
+    ]
+  },
+  {
+    "id": "xero",
+    "verb": "ξέρω",
+    "translation": "знать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "ήξερα",
+        "present": "ξέρω",
+        "future": "θα ξέρω"
+      },
+      {
+        "person": "2sg",
+        "past": "ήξερες",
+        "present": "ξέρεις",
+        "future": "θα ξέρεις"
+      },
+      {
+        "person": "3sg",
+        "past": "ήξερε",
+        "present": "ξέρει",
+        "future": "θα ξέρει"
+      },
+      {
+        "person": "1pl",
+        "past": "ξέραμε",
+        "present": "ξέρουμε",
+        "future": "θα ξέρουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "ξέρατε",
+        "present": "ξέρετε",
+        "future": "θα ξέρετε"
+      },
+      {
+        "person": "3pl",
+        "past": "ήξεραν",
+        "present": "ξέρουν",
+        "future": "θα ξέρουν"
+      }
+    ]
+  },
+  {
+    "id": "xechnao",
+    "verb": "ξεχνάω",
+    "translation": "забывать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "ξέχασα",
+        "present": "ξεχνάω",
+        "future": "θα ξεχάσω"
+      },
+      {
+        "person": "2sg",
+        "past": "ξέχασες",
+        "present": "ξεχνάς",
+        "future": "θα ξεχάσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "ξέχασε",
+        "present": "ξεχνάει",
+        "future": "θα ξεχάσει"
+      },
+      {
+        "person": "1pl",
+        "past": "ξεχάσαμε",
+        "present": "ξεχνάμε",
+        "future": "θα ξεχάσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "ξεχάσατε",
+        "present": "ξεχνάτε",
+        "future": "θα ξεχάσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "ξέχασαν",
+        "present": "ξεχνάνε",
+        "future": "θα ξεχάσουν"
+      }
+    ]
+  },
+  {
+    "id": "paizo",
+    "verb": "παίζω",
+    "translation": "играть",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "έπαιξα",
+        "present": "παίζω",
+        "future": "θα παίξω"
+      },
+      {
+        "person": "2sg",
+        "past": "έπαιξες",
+        "present": "παίζεις",
+        "future": "θα παίξεις"
+      },
+      {
+        "person": "3sg",
+        "past": "έπαιξε",
+        "present": "παίζει",
+        "future": "θα παίξει"
+      },
+      {
+        "person": "1pl",
+        "past": "παίξαμε",
+        "present": "παίζουμε",
+        "future": "θα παίξουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "παίξατε",
+        "present": "παίζετε",
+        "future": "θα παίξετε"
+      },
+      {
+        "person": "3pl",
+        "past": "έπαιξαν",
+        "present": "παίζουν",
+        "future": "θα παίξουν"
+      }
+    ]
+  },
+  {
+    "id": "pairno",
+    "verb": "παίρνω",
+    "translation": "брать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "πήρα",
+        "present": "παίρνω",
+        "future": "θα πάρω"
+      },
+      {
+        "person": "2sg",
+        "past": "πήρες",
+        "present": "παίρνεις",
+        "future": "θα πάρεις"
+      },
+      {
+        "person": "3sg",
+        "past": "πήρε",
+        "present": "παίρνει",
+        "future": "θα πάρει"
+      },
+      {
+        "person": "1pl",
+        "past": "πήραμε",
+        "present": "παίρνουμε",
+        "future": "θα πάρουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "πήρατε",
+        "present": "παίρνετε",
+        "future": "θα πάρετε"
+      },
+      {
+        "person": "3pl",
+        "past": "πήραν",
+        "present": "παίρνουν",
+        "future": "θα πάρουν"
+      }
+    ]
+  },
+  {
+    "id": "perimeno",
+    "verb": "περιμένω",
+    "translation": "ждать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "περίμενα",
+        "present": "περιμένω",
+        "future": "θα περιμένω"
+      },
+      {
+        "person": "2sg",
+        "past": "περίμενες",
+        "present": "περιμένεις",
+        "future": "θα περιμένεις"
+      },
+      {
+        "person": "3sg",
+        "past": "περίμενε",
+        "present": "περιμένει",
+        "future": "θα περιμένει"
+      },
+      {
+        "person": "1pl",
+        "past": "περιμέναμε",
+        "present": "περιμένουμε",
+        "future": "θα περιμένουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "περιμένατε",
+        "present": "περιμένετε",
+        "future": "θα περιμένετε"
+      },
+      {
+        "person": "3pl",
+        "past": "περίμεναν",
+        "present": "περιμένουν",
+        "future": "θα περιμένουν"
+      }
+    ]
+  },
+  {
+    "id": "pernao",
+    "verb": "περνάω",
+    "translation": "проводить (время), проходить",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "πέρασα",
+        "present": "περνάω",
+        "future": "θα περάσω"
+      },
+      {
+        "person": "2sg",
+        "past": "πέρασες",
+        "present": "περνάς",
+        "future": "θα περάσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "πέρασε",
+        "present": "περνάει",
+        "future": "θα περάσει"
+      },
+      {
+        "person": "1pl",
+        "past": "περάσαμε",
+        "present": "περνάμε",
+        "future": "θα περάσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "περάσατε",
+        "present": "περνάτε",
+        "future": "θα περάσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "πέρασαν",
+        "present": "περνάνε",
+        "future": "θα περάσουν"
+      }
+    ]
+  },
+  {
+    "id": "pigaino_pao",
+    "verb": "πηγαίνω / πάω",
+    "translation": "идти, ехать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "πήγα",
+        "present": "πηγαίνω / πάω",
+        "future": "θα πάω"
+      },
+      {
+        "person": "2sg",
+        "past": "πήγες",
+        "present": "πηγαίνεις / πας",
+        "future": "θα πας"
+      },
+      {
+        "person": "3sg",
+        "past": "πήγε",
+        "present": "πηγαίνει / πάει",
+        "future": "θα πάει"
+      },
+      {
+        "person": "1pl",
+        "past": "πήγαμε",
+        "present": "πηγαίνουμε / πάμε",
+        "future": "θα πάμε"
+      },
+      {
+        "person": "2pl",
+        "past": "πήγατε",
+        "present": "πηγαίνετε / πάτε",
+        "future": "θα πάτε"
+      },
+      {
+        "person": "3pl",
+        "past": "πήγαν",
+        "present": "πηγαίνουν / πάνε",
+        "future": "θα πάνε"
+      }
+    ]
+  },
+  {
+    "id": "pino",
+    "verb": "πίνω",
+    "translation": "пить",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "ήπια",
+        "present": "πίνω",
+        "future": "θα πιω"
+      },
+      {
+        "person": "2sg",
+        "past": "ήπιες",
+        "present": "πίνεις",
+        "future": "θα πιεις"
+      },
+      {
+        "person": "3sg",
+        "past": "ήπιε",
+        "present": "πίνει",
+        "future": "θα πιει"
+      },
+      {
+        "person": "1pl",
+        "past": "ήπιαμε",
+        "present": "πίνουμε",
+        "future": "θα πιούμε"
+      },
+      {
+        "person": "2pl",
+        "past": "ήπιατε",
+        "present": "πίνετε",
+        "future": "θα πιείτε"
+      },
+      {
+        "person": "3pl",
+        "past": "ήπιαν",
+        "present": "πίνουν",
+        "future": "θα πιουν"
+      }
+    ]
+  },
+  {
+    "id": "pleno",
+    "verb": "πλένω",
+    "translation": "мыть",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "έπλυνα",
+        "present": "πλένω",
+        "future": "θα πλύνω"
+      },
+      {
+        "person": "2sg",
+        "past": "έπλυνες",
+        "present": "πλένεις",
+        "future": "θα πλύνεις"
+      },
+      {
+        "person": "3sg",
+        "past": "έπλυνε",
+        "present": "πλένει",
+        "future": "θα πλύνει"
+      },
+      {
+        "person": "1pl",
+        "past": "πλύναμε",
+        "present": "πλένουμε",
+        "future": "θα πλύνουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "πλύνατε",
+        "present": "πλένετε",
+        "future": "θα πλύνετε"
+      },
+      {
+        "person": "3pl",
+        "past": "έπλυναν",
+        "present": "πλένουν",
+        "future": "θα πλύνουν"
+      }
+    ]
+  },
+  {
+    "id": "plirono",
+    "verb": "πληρώνω",
+    "translation": "платить",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "πλήρωσα",
+        "present": "πληρώνω",
+        "future": "θα πληρώσω"
+      },
+      {
+        "person": "2sg",
+        "past": "πλήρωσες",
+        "present": "πληρώνεις",
+        "future": "θα πληρώσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "πλήρωσε",
+        "present": "πληρώνει",
+        "future": "θα πληρώσει"
+      },
+      {
+        "person": "1pl",
+        "past": "πληρώσαμε",
+        "present": "πληρώνουμε",
+        "future": "θα πληρώσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "πληρώσατε",
+        "present": "πληρώνετε",
+        "future": "θα πληρώσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "πλήρωσαν",
+        "present": "πληρώνουν",
+        "future": "θα πληρώσουν"
+      }
+    ]
+  },
+  {
+    "id": "rotao",
+    "verb": "ρωτάω",
+    "translation": "спрашивать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "ρώτησα",
+        "present": "ρωτάω",
+        "future": "θα ρωτήσω"
+      },
+      {
+        "person": "2sg",
+        "past": "ρώτησες",
+        "present": "ρωτάς",
+        "future": "θα ρωτήσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "ρώτησε",
+        "present": "ρωτάει",
+        "future": "θα ρωτήσει"
+      },
+      {
+        "person": "1pl",
+        "past": "ρωτήσαμε",
+        "present": "ρωτάμε",
+        "future": "θα ρωτήσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "ρωτήσατε",
+        "present": "ρωτάτε",
+        "future": "θα ρωτήσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "ρώτησαν",
+        "present": "ρωτάνε",
+        "future": "θα ρωτήσουν"
+      }
+    ]
+  },
+  {
+    "id": "stelno",
+    "verb": "στέλνω",
+    "translation": "отправлять",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "έστειλα",
+        "present": "στέλνω",
+        "future": "θα στείλω"
+      },
+      {
+        "person": "2sg",
+        "past": "έστειλες",
+        "present": "στέλνεις",
+        "future": "θα στείλεις"
+      },
+      {
+        "person": "3sg",
+        "past": "έστειλε",
+        "present": "στέλνει",
+        "future": "θα στείλει"
+      },
+      {
+        "person": "1pl",
+        "past": "στείλαμε",
+        "present": "στέλνουμε",
+        "future": "θα στείλουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "στείλατε",
+        "present": "στέλνετε",
+        "future": "θα στείλετε"
+      },
+      {
+        "person": "3pl",
+        "past": "έστειλαν",
+        "present": "στέλνουν",
+        "future": "θα στείλουν"
+      }
+    ]
+  },
+  {
+    "id": "teleiono",
+    "verb": "τελειώνω",
+    "translation": "заканчивать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "τελείωσα",
+        "present": "τελειώνω",
+        "future": "θα τελειώσω"
+      },
+      {
+        "person": "2sg",
+        "past": "τελείωσες",
+        "present": "τελειώνεις",
+        "future": "θα τελειώσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "τελείωσε",
+        "present": "τελειώνει",
+        "future": "θα τελειώσει"
+      },
+      {
+        "person": "1pl",
+        "past": "τελειώσαμε",
+        "present": "τελειώνουμε",
+        "future": "θα τελειώσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "τελειώσατε",
+        "present": "τελειώνετε",
+        "future": "θα τελειώσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "τελείωσαν",
+        "present": "τελειώνουν",
+        "future": "θα τελειώσουν"
+      }
+    ]
+  },
+  {
+    "id": "tilefono",
+    "verb": "τηλεφωνώ",
+    "translation": "звонить",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "τηλεφώνησα",
+        "present": "τηλεφωνώ",
+        "future": "θα τηλεφωνήσω"
+      },
+      {
+        "person": "2sg",
+        "past": "τηλεφώνησες",
+        "present": "τηλεφωνείς",
+        "future": "θα τηλεφωνήσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "τηλεφώνησε",
+        "present": "τηλεφωνεί",
+        "future": "θα τηλεφωνήσει"
+      },
+      {
+        "person": "1pl",
+        "past": "τηλεφωνήσαμε",
+        "present": "τηλεφωνούμε",
+        "future": "θα τηλεφωνήσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "τηλεφωνήσατε",
+        "present": "τηλεφωνείτε",
+        "future": "θα τηλεφωνήσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "τηλεφώνησαν",
+        "present": "τηλεφωνούν",
+        "future": "θα τηλεφωνήσουν"
+      }
+    ]
+  },
+  {
+    "id": "troo",
+    "verb": "τρώω",
+    "translation": "есть",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "έφαγα",
+        "present": "τρώω",
+        "future": "θα φάω"
+      },
+      {
+        "person": "2sg",
+        "past": "έφαγες",
+        "present": "τρως",
+        "future": "θα φας"
+      },
+      {
+        "person": "3sg",
+        "past": "έφαγε",
+        "present": "τρώει",
+        "future": "θα φάει"
+      },
+      {
+        "person": "1pl",
+        "past": "φάγαμε",
+        "present": "τρώμε",
+        "future": "θα φάμε"
+      },
+      {
+        "person": "2pl",
+        "past": "φάγατε",
+        "present": "τρώτε",
+        "future": "θα φάτε"
+      },
+      {
+        "person": "3pl",
+        "past": "έφαγαν",
+        "present": "τρώνε",
+        "future": "θα φάνε"
+      }
+    ]
+  },
+  {
+    "id": "yparcho",
+    "verb": "υπάρχω",
+    "translation": "существовать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "υπήρξα",
+        "present": "υπάρχω",
+        "future": "θα υπάρξω"
+      },
+      {
+        "person": "2sg",
+        "past": "υπήρξες",
+        "present": "υπάρχεις",
+        "future": "θα υπάρξεις"
+      },
+      {
+        "person": "3sg",
+        "past": "υπήρξε",
+        "present": "υπάρχει",
+        "future": "θα υπάρξει"
+      },
+      {
+        "person": "1pl",
+        "past": "υπήρξαμε",
+        "present": "υπάρχουμε",
+        "future": "θα υπάρξουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "υπήρξατε",
+        "present": "υπάρχετε",
+        "future": "θα υπάρξετε"
+      },
+      {
+        "person": "3pl",
+        "past": "υπήρξαν",
+        "present": "υπάρχουν",
+        "future": "θα υπάρξουν"
+      }
+    ]
+  },
+  {
+    "id": "ferno",
+    "verb": "φέρνω",
+    "translation": "приносить",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "έφερα",
+        "present": "φέρνω",
+        "future": "θα φέρω"
+      },
+      {
+        "person": "2sg",
+        "past": "έφερες",
+        "present": "φέρνεις",
+        "future": "θα φέρεις"
+      },
+      {
+        "person": "3sg",
+        "past": "έφερε",
+        "present": "φέρνει",
+        "future": "θα φέρει"
+      },
+      {
+        "person": "1pl",
+        "past": "φέραμε",
+        "present": "φέρνουμε",
+        "future": "θα φέρουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "φέρατε",
+        "present": "φέρνετε",
+        "future": "θα φέρετε"
+      },
+      {
+        "person": "3pl",
+        "past": "έφεραν",
+        "present": "φέρνουν",
+        "future": "θα φέρουν"
+      }
+    ]
+  },
+  {
+    "id": "feygo",
+    "verb": "φεύγω",
+    "translation": "уходить",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "έφυγα",
+        "present": "φεύγω",
+        "future": "θα φύγω"
+      },
+      {
+        "person": "2sg",
+        "past": "έφυγες",
+        "present": "φεύγεις",
+        "future": "θα φύγεις"
+      },
+      {
+        "person": "3sg",
+        "past": "έφυγε",
+        "present": "φεύγει",
+        "future": "θα φύγει"
+      },
+      {
+        "person": "1pl",
+        "past": "φύγαμε",
+        "present": "φεύγουμε",
+        "future": "θα φύγουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "φύγατε",
+        "present": "φεύγετε",
+        "future": "θα φύγετε"
+      },
+      {
+        "person": "3pl",
+        "past": "έφυγαν",
+        "present": "φεύγουν",
+        "future": "θα φύγουν"
+      }
+    ]
+  },
+  {
+    "id": "fovamai",
+    "verb": "φοβάμαι",
+    "translation": "бояться",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "φοβήθηκα",
+        "present": "φοβάμαι",
+        "future": "θα φοβηθώ"
+      },
+      {
+        "person": "2sg",
+        "past": "φοβήθηκες",
+        "present": "φοβάσαι",
+        "future": "θα φοβηθείς"
+      },
+      {
+        "person": "3sg",
+        "past": "φοβήθηκε",
+        "present": "φοβάται",
+        "future": "θα φοβηθεί"
+      },
+      {
+        "person": "1pl",
+        "past": "φοβηθήκαμε",
+        "present": "φοβόμαστε",
+        "future": "θα φοβηθούμε"
+      },
+      {
+        "person": "2pl",
+        "past": "φοβηθήκατε",
+        "present": "φοβάστε",
+        "future": "θα φοβηθείτε"
+      },
+      {
+        "person": "3pl",
+        "past": "φοβήθηκαν",
+        "present": "φοβούνται",
+        "future": "θα φοβηθούν"
+      }
+    ]
+  },
+  {
+    "id": "ftano",
+    "verb": "φτάνω",
+    "translation": "доходить, достигать",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "έφτασα",
+        "present": "φτάνω",
+        "future": "θα φτάσω"
+      },
+      {
+        "person": "2sg",
+        "past": "έφτασες",
+        "present": "φτάνεις",
+        "future": "θα φτάσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "έφτασε",
+        "present": "φτάνει",
+        "future": "θα φτάσει"
+      },
+      {
+        "person": "1pl",
+        "past": "φτάσαμε",
+        "present": "φτάνουμε",
+        "future": "θα φτάσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "φτάσατε",
+        "present": "φτάνετε",
+        "future": "θα φτάσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "έφτασαν",
+        "present": "φτάνουν",
+        "future": "θα φτάσουν"
+      }
+    ]
+  },
+  {
+    "id": "psonizo",
+    "verb": "ψωνίζω",
+    "translation": "ходить за покупками",
+    "forms": [
+      {
+        "person": "1sg",
+        "past": "ψώνισα",
+        "present": "ψωνίζω",
+        "future": "θα ψωνίσω"
+      },
+      {
+        "person": "2sg",
+        "past": "ψώνισες",
+        "present": "ψωνίζεις",
+        "future": "θα ψωνίσεις"
+      },
+      {
+        "person": "3sg",
+        "past": "ψώνισε",
+        "present": "ψωνίζει",
+        "future": "θα ψωνίσει"
+      },
+      {
+        "person": "1pl",
+        "past": "ψωνίσαμε",
+        "present": "ψωνίζουμε",
+        "future": "θα ψωνίσουμε"
+      },
+      {
+        "person": "2pl",
+        "past": "ψωνίσατε",
+        "present": "ψωνίζετε",
+        "future": "θα ψωνίσετε"
+      },
+      {
+        "person": "3pl",
+        "past": "ψώνισαν",
+        "present": "ψωνίζουν",
+        "future": "θα ψωνίσουν"
+      }
+    ]
+  }
+]

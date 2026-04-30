@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <title>Greek Study</title>
+  <meta name="description" content="Учим греческие слова и формы глаголов.">
+
+  <link rel="stylesheet" href="assets/styles/main.css">
+  <script src="assets/js/app.js" defer></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <h1 class="topbar__title">Greek Study</h1>
+    <nav class="modes" role="tablist" aria-label="Режим">
+      <button type="button" class="mode-btn is-active" data-mode="cards" role="tab" aria-selected="true">Карточки</button>
+      <button type="button" class="mode-btn" data-mode="list" role="tab" aria-selected="false">Список</button>
+      <button type="button" class="mode-btn" data-mode="rules" role="tab" aria-selected="false">Правила</button>
+    </nav>
+  </header>
+
+  <main id="app">
+    <p class="status" id="status">Загрузка…</p>
+
+    <section id="view-cards" class="view" role="tabpanel" aria-label="Карточки" hidden>
+      <div class="cards-controls">
+        <label class="control">
+          <span class="control__label">Режим:</span>
+          <select id="cards-submode">
+            <option value="lemma-ru">Слова: GR → RU</option>
+            <option value="ru-lemma">Слова: RU → GR</option>
+            <option value="name-form">Форма: назови</option>
+            <option value="recognize-form">Форма: узнай</option>
+            <option value="conjugate-tense">Спряжение в одном времени</option>
+          </select>
+        </label>
+        <button type="button" id="cards-restart" class="btn-text">Сначала</button>
+        <span class="cards-counter" id="cards-counter">Карточка 1</span>
+      </div>
+
+      <article class="card" id="card"></article>
+    </section>
+
+    <section id="view-list" class="view" role="tabpanel" aria-label="Список" hidden>
+      <div class="list-controls">
+        <input type="search" id="list-search" placeholder="Поиск: слово, перевод или любая форма…" autocomplete="off">
+        <span class="list-counter" id="list-counter"></span>
+      </div>
+      <ul class="list" id="list"></ul>
+    </section>
+
+    <section id="view-rules" class="view" role="tabpanel" aria-label="Правила" hidden>
+      <div class="rules-controls">
+        <label class="control">
+          <span class="control__label">Режим:</span>
+          <select id="rules-submode">
+            <option value="list">Список правил</option>
+            <option value="cards">Карточки правил</option>
+          </select>
+        </label>
+        <input type="search" id="rules-search" placeholder="Поиск: название, текст, тег…" autocomplete="off" hidden>
+        <button type="button" id="rules-restart" class="btn-text" hidden>Сначала</button>
+        <span class="rules-counter" id="rules-counter"></span>
+      </div>
+      <p class="status" id="rules-status" hidden></p>
+      <div id="rules-content"></div>
+    </section>
+  </main>
+</body>
+</html>

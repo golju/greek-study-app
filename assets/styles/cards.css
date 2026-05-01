@@ -1,0 +1,89 @@
+.card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 28px 16px 20px;
+  text-align: center;
+}
+
+.card.card--clickable { cursor: pointer; }
+
+.card__meta {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.card__stimulus {
+  font-size: clamp(28px, 6vw, 40px);
+  font-weight: 600;
+  margin-bottom: 12px;
+  word-break: break-word;
+}
+
+.card__stimulus--ru { font-weight: 500; }
+
+.card__cue {
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.card__answer {
+  font-size: clamp(22px, 5vw, 30px);
+  font-weight: 600;
+  margin: 8px 0 16px;
+  color: var(--ok-fg);
+  word-break: break-word;
+}
+
+.card__answer--placeholder {
+  color: var(--muted);
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.card__verdict {
+  font-weight: 600;
+  margin: 8px 0 4px;
+}
+.card__verdict.is-correct { color: var(--ok-fg); }
+.card__verdict.is-wrong { color: var(--err-fg); }
+
+.card__answer-meta {
+  margin: 4px 0 12px;
+  font-size: 15px;
+  color: var(--fg);
+}
+
+.card__actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.card__btn {
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card__btn--primary {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card__btn:hover { background: var(--bg-soft); }
+  .card__btn--primary:hover { background: #333; }
+}
+
+.card__hint {
+  margin: 12px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}

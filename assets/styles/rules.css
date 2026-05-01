@@ -1,0 +1,261 @@
+/* ---------- Rules: blocks ---------- */
+
+.rule-p {
+  margin: 8px 0;
+  line-height: 1.55;
+}
+
+.rule-list {
+  margin: 8px 0;
+  padding-left: 22px;
+}
+
+.rule-list li {
+  margin: 4px 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.examples {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.examples td {
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  vertical-align: top;
+}
+
+.examples__gr {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.examples__ru {
+  color: var(--muted);
+}
+
+/* ---------- Rules: badges ---------- */
+
+.rule-badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 6px 0 12px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.badge--category {
+  background: #eef3ff;
+  border-color: #d3e0ff;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+/* ---------- Rules: list ---------- */
+
+.rules-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rules-list__item {
+  border-bottom: 1px solid var(--border);
+}
+
+.rules-list__item details {
+  padding: 4px 0;
+}
+
+.rules-list__item summary {
+  cursor: pointer;
+  padding: 8px 4px;
+  font-size: 17px;
+}
+
+.rules-list__title {
+  font-weight: 600;
+}
+
+.rules-list__summary {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* ---------- Rules: card ---------- */
+
+.card--rule {
+  text-align: left;
+  padding: 20px 18px;
+}
+
+.card__stimulus--rule {
+  font-size: clamp(20px, 4vw, 26px);
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.rule-summary {
+  color: var(--muted);
+  font-style: italic;
+  margin: 4px 0 12px;
+}
+
+.rule-divider {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 14px 0 10px;
+}
+
+.card--rule .card__actions {
+  justify-content: flex-start;
+}
+
+.card--rule .card__hint {
+  text-align: left;
+}
+
+/* ---------- Rules: train button + training UI ---------- */
+
+.rule-train {
+  display: flex;
+  margin: 14px 0 6px;
+}
+
+.rules-list__item .rule-train {
+  margin-left: 4px;
+}
+
+.card--rule .rule-train {
+  margin-top: 16px;
+  justify-content: flex-start;
+}
+
+.rules-training__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.rules-training__restart {
+  margin-left: auto;
+}
+
+.rules-training__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.card--training {
+  text-align: center;
+  padding: 28px 16px 20px;
+}
+
+.card--training .card__stimulus {
+  font-size: clamp(24px, 5.5vw, 34px);
+}
+
+.rules-training__note {
+  margin: 4px 0 12px;
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.rules-training__tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 4px 0 8px;
+}
+
+/* ---------- Rules: filters (tags) ---------- */
+
+.rules-tags {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 4px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    #000 0,
+    #000 calc(100% - 28px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    #000 0,
+    #000 calc(100% - 28px),
+    transparent 100%
+  );
+}
+
+.rules-tags::-webkit-scrollbar { display: none; }
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  border-radius: 99px;
+  font: inherit;
+  font-size: 13px;
+  color: var(--fg);
+  cursor: pointer;
+  line-height: 1.5;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.tag-chip__count {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.tag-chip.is-active {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+
+.tag-chip.is-active .tag-chip__count {
+  color: inherit;
+  opacity: 0.75;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tag-chip:hover { background: #ececec; }
+  .tag-chip.is-active:hover { background: #333; }
+}

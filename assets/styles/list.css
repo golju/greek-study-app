@@ -1,0 +1,22 @@
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list__item {
+  border-bottom: 1px solid var(--border);
+}
+
+.list__item details {
+  padding: 4px 0;
+}
+
+.list__item summary {
+  cursor: pointer;
+  padding: 8px 4px;
+  font-size: 17px;
+}
+
+.list__verb { font-weight: 600; }
+.list__translation { color: var(--muted); }

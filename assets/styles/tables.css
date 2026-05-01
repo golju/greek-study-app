@@ -1,0 +1,121 @@
+/* Скролл-обёртка для широких таблиц (forms 4×N, choice-grid, conj-table). */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Короткие лейблы лиц (1sg/2sg/...) видны только на узком экране. */
+.person-label__short { display: none; }
+
+/* ---------- Forms table (shared) ---------- */
+
+.forms {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0;
+  font-size: 15px;
+  text-align: left;
+}
+
+.forms th,
+.forms td {
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  vertical-align: top;
+}
+
+.forms thead th {
+  background: var(--bg-soft);
+  font-weight: 600;
+}
+
+.forms tbody th {
+  font-weight: 500;
+  color: var(--muted);
+  white-space: nowrap;
+  background: #fafafa;
+}
+
+/* ---------- F2: choice grid ---------- */
+
+.choice-grid {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 15px;
+}
+
+.choice-grid th,
+.choice-grid td {
+  border: 1px solid var(--border);
+  padding: 0;
+  text-align: center;
+}
+
+.choice-grid thead th {
+  padding: 6px 8px;
+  background: var(--bg-soft);
+  font-weight: 600;
+}
+
+.choice-grid tbody th {
+  padding: 6px 10px;
+  background: #fafafa;
+  color: var(--muted);
+  white-space: nowrap;
+  text-align: left;
+  font-weight: 500;
+}
+
+.choice-cell {
+  display: block;
+  width: 100%;
+  min-height: 38px;
+  background: #fff;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  padding: 8px 6px;
+  text-align: center;
+}
+
+.choice-cell:disabled { cursor: default; }
+
+@media (hover: hover) and (pointer: fine) {
+  .choice-cell:hover:not(:disabled) { background: var(--bg-soft); }
+}
+
+.choice-cell.is-correct {
+  background: var(--ok-bg);
+  color: var(--ok-fg);
+  font-weight: 600;
+}
+
+.choice-cell.is-wrong {
+  background: var(--err-bg);
+  color: var(--err-fg);
+  text-decoration: line-through;
+}
+
+.choice-cell.is-dim { color: var(--muted); }
+
+/* ---------- C1: conjugation table ---------- */
+
+.conj-table { margin-top: 12px; }
+
+.conj-table .conj-row__cell {
+  cursor: pointer;
+  min-width: 180px;
+  font-size: 17px;
+  user-select: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .conj-table .conj-row__cell:hover { background: var(--bg-soft); }
+}
+
+.conj-row.is-revealed .conj-row__cell {
+  font-weight: 600;
+  color: var(--ok-fg);
+}

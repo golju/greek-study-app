@@ -1,0 +1,157 @@
+/* ============================================================ */
+/* Мобильная адаптация (узкий экран, телефон в портрете).        */
+/* Десктоп остаётся как был — стили ниже не применяются ≥ 601px. */
+/* ============================================================ */
+
+@media (max-width: 600px) {
+  /* Корпус и контейнеры */
+  main {
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+    padding-top: 12px;
+  }
+
+  /* Топбар: заголовок отдельно сверху, вкладки на всю ширину снизу. */
+  .topbar {
+    gap: 8px;
+    padding-top: max(8px, env(safe-area-inset-top));
+    padding-bottom: 8px;
+  }
+  .topbar__title { font-size: 16px; }
+  .modes {
+    margin-left: 0;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .mode-btn {
+    flex: 1 1 0;
+    min-height: 44px;
+    padding: 10px 12px;
+    text-align: center;
+  }
+
+  /* Контролы вкладок */
+  .cards-controls,
+  .list-controls,
+  .rules-controls {
+    gap: 8px;
+  }
+  .cards-controls .control,
+  .rules-controls .control {
+    width: 100%;
+  }
+  #cards-submode,
+  #rules-submode,
+  #rules-category {
+    flex: 1 1 auto;
+    min-height: 44px;
+  }
+  #list-search,
+  #rules-search {
+    flex: 1 1 100%;
+    min-height: 44px;
+  }
+  .cards-counter,
+  .list-counter,
+  .rules-counter {
+    margin-left: 0;
+    font-size: 13px;
+  }
+  .btn-text {
+    padding: 8px 4px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Карточка */
+  .card {
+    padding: 18px 12px 16px;
+  }
+  .card__btn {
+    min-height: 44px;
+    padding: 10px 16px;
+  }
+  .card__actions {
+    gap: 8px;
+  }
+  .card__cue { font-size: 16px; }
+
+  /* Переключаем длинные лейблы лиц на короткие в таблицах. */
+  .person-label__full { display: none; }
+  .person-label__short { display: inline; }
+  .person-label {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Таблица форм: ужать шрифт и паддинги, чтобы помещалась без скролла. */
+  .forms {
+    font-size: 13px;
+  }
+  .forms th,
+  .forms td {
+    padding: 5px 6px;
+  }
+
+  /* Сетка выбора (F2): тап-цели ≥ 44px и компактнее текст. */
+  .choice-grid { font-size: 13px; }
+  .choice-grid thead th { padding: 6px 4px; }
+  .choice-grid tbody th { padding: 6px 6px; }
+  .choice-cell {
+    min-height: 44px;
+    padding: 10px 4px;
+  }
+
+  /* Спряжение (C1): высокие строки для удобного тапа. */
+  .conj-table .conj-row__cell {
+    min-height: 44px;
+    min-width: 0;
+    padding: 10px 10px;
+    font-size: 16px;
+  }
+
+  /* Списки слов и правил — увеличиваем тап-зону summary. */
+  .list__item summary,
+  .rules-list__item summary {
+    padding: 12px 4px;
+    min-height: 44px;
+  }
+
+  /* Правила: чипы тегов крупнее на мобилке для удобного тапа. */
+  .tag-chip {
+    min-height: 36px;
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  /* Правила: компактнее заголовок и блоки на узком экране. */
+  .card--rule { padding: 16px 12px; }
+  .card__stimulus--rule { font-size: 20px; }
+  .rule-p { line-height: 1.5; }
+  .rule-list { padding-left: 20px; }
+  .examples { font-size: 14px; }
+  .examples td { padding: 5px 8px; }
+  .badge { font-size: 11px; padding: 1px 7px; }
+
+  /* Тренировка карточек: заголовок и тап-зоны крупнее. */
+  .rules-training__title { font-size: 17px; }
+  .card--training { padding: 20px 12px 16px; }
+  .card--training .card__stimulus { font-size: clamp(22px, 6.5vw, 28px); }
+
+  /* На узких экранах примеры могут не помещаться — пусть скроллятся. */
+  .examples {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .examples tbody { display: table; width: 100%; }
+}
+
+/* Дополнительно для очень узких экранов (старые мини-телефоны). */
+@media (max-width: 360px) {
+  .mode-btn { font-size: 14px; padding: 10px 8px; }
+  .card__stimulus { font-size: 26px; }
+  .forms { font-size: 12px; }
+  .choice-grid { font-size: 12px; }
+}

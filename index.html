@@ -53,17 +53,22 @@
 
     <section id="view-rules" class="view" role="tabpanel" aria-label="Правила" hidden>
       <div class="rules-controls">
-        <label class="control">
+        <label class="control" id="rules-submode-control">
           <span class="control__label">Режим:</span>
           <select id="rules-submode">
             <option value="list">Список правил</option>
             <option value="cards">Карточки правил</option>
           </select>
         </label>
+        <label class="control" id="rules-category-control" hidden>
+          <span class="control__label">Категория:</span>
+          <select id="rules-category"></select>
+        </label>
         <input type="search" id="rules-search" placeholder="Поиск: название, текст, тег…" autocomplete="off" hidden>
         <button type="button" id="rules-restart" class="btn-text" hidden>Сначала</button>
         <span class="rules-counter" id="rules-counter"></span>
       </div>
+      <div class="rules-tags" id="rules-tags" hidden></div>
       <p class="status" id="rules-status" hidden></p>
       <div id="rules-content"></div>
     </section>

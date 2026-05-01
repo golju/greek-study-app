@@ -560,6 +560,145 @@ main {
   text-align: left;
 }
 
+/* ---------- Rules: train button + training UI ---------- */
+
+.rule-train {
+  display: flex;
+  margin: 14px 0 6px;
+}
+
+.rules-list__item .rule-train {
+  margin-left: 4px;
+}
+
+.card--rule .rule-train {
+  margin-top: 16px;
+  justify-content: flex-start;
+}
+
+.rules-training__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.rules-training__restart {
+  margin-left: auto;
+}
+
+.rules-training__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.card--training {
+  text-align: center;
+  padding: 28px 16px 20px;
+}
+
+.card--training .card__stimulus {
+  font-size: clamp(24px, 5.5vw, 34px);
+}
+
+.rules-training__note {
+  margin: 4px 0 12px;
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.rules-training__tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 4px 0 8px;
+}
+
+/* ---------- Rules: filters (category + tags) ---------- */
+
+#rules-category {
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #fff;
+}
+
+.rules-tags {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding: 4px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    #000 0,
+    #000 calc(100% - 28px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    #000 0,
+    #000 calc(100% - 28px),
+    transparent 100%
+  );
+}
+
+.rules-tags::-webkit-scrollbar { display: none; }
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  border-radius: 99px;
+  font: inherit;
+  font-size: 13px;
+  color: var(--fg);
+  cursor: pointer;
+  line-height: 1.5;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.tag-chip__count {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.tag-chip.is-active {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+
+.tag-chip.is-active .tag-chip__count {
+  color: inherit;
+  opacity: 0.75;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tag-chip:hover { background: #ececec; }
+  .tag-chip.is-active:hover { background: #333; }
+}
+
 /* ============================================================ */
 /* Мобильная адаптация (узкий экран, телефон в портрете).        */
 /* Десктоп остаётся как был — стили ниже не применяются ≥ 601px. */
@@ -603,7 +742,8 @@ main {
     width: 100%;
   }
   #cards-submode,
-  #rules-submode {
+  #rules-submode,
+  #rules-category {
     flex: 1 1 auto;
     min-height: 44px;
   }
@@ -679,6 +819,13 @@ main {
     min-height: 44px;
   }
 
+  /* Правила: чипы тегов крупнее на мобилке для удобного тапа. */
+  .tag-chip {
+    min-height: 36px;
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
   /* Правила: компактнее заголовок и блоки на узком экране. */
   .card--rule { padding: 16px 12px; }
   .card__stimulus--rule { font-size: 20px; }
@@ -687,6 +834,11 @@ main {
   .examples { font-size: 14px; }
   .examples td { padding: 5px 8px; }
   .badge { font-size: 11px; padding: 1px 7px; }
+
+  /* Тренировка карточек: заголовок и тап-зоны крупнее. */
+  .rules-training__title { font-size: 17px; }
+  .card--training { padding: 20px 12px 16px; }
+  .card--training .card__stimulus { font-size: clamp(22px, 6.5vw, 28px); }
 
   /* На узких экранах примеры могут не помещаться — пусть скроллятся. */
   .examples {

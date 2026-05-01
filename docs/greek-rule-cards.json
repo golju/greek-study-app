@@ -1,0 +1,170 @@
+[
+  {
+    "id": "indefinite-tipota-question-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Έχεις τίποτα;",
+    "back": "У тебя есть что-нибудь?",
+    "note": "τίποτα используется в вопросе.",
+    "tags": ["indefinite", "question", "tipota"]
+  },
+  {
+    "id": "indefinite-tipota-negation-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Δεν έχω τίποτα.",
+    "back": "У меня ничего нет.",
+    "note": "τίποτα используется в отрицании.",
+    "tags": ["indefinite", "negation", "tipota"]
+  },
+  {
+    "id": "indefinite-kati-affirmation-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Έχω κάτι.",
+    "back": "У меня что-то есть.",
+    "note": "κάτι используется в утверждении.",
+    "tags": ["indefinite", "affirmation", "kati"]
+  },
+  {
+    "id": "indefinite-tipota-negation-02",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Δεν είδα τίποτα.",
+    "back": "Я ничего не видел.",
+    "note": "τίποτα в отрицании после δεν.",
+    "tags": ["indefinite", "negation", "tipota"]
+  },
+  {
+    "id": "indefinite-tipota-question-02",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Είδες τίποτα;",
+    "back": "Ты что-нибудь видел?",
+    "note": "τίποτα в вопросе — «что-нибудь».",
+    "tags": ["indefinite", "question", "tipota"]
+  },
+  {
+    "id": "indefinite-kanenas-question-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Είναι κανένας εδώ;",
+    "back": "Здесь есть кто-нибудь?",
+    "note": "κανένας используется в вопросе.",
+    "tags": ["indefinite", "question", "kanenas"]
+  },
+  {
+    "id": "indefinite-kanenas-negation-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Δεν είναι κανένας εδώ.",
+    "back": "Здесь никого нет.",
+    "note": "κανένας используется в отрицании.",
+    "tags": ["indefinite", "negation", "kanenas"]
+  },
+  {
+    "id": "indefinite-kapoios-affirmation-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Κάποιος είναι εδώ.",
+    "back": "Кто-то здесь есть.",
+    "note": "κάποιος используется в утверждении.",
+    "tags": ["indefinite", "affirmation", "kapoios"]
+  },
+  {
+    "id": "indefinite-kanena-negation-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Δεν έχω κανένα φίλο εδώ.",
+    "back": "У меня здесь нет никакого друга.",
+    "note": "κανένα — средний род в отрицании.",
+    "tags": ["indefinite", "negation", "kanenas", "neuter"]
+  },
+  {
+    "id": "indefinite-kamia-negation-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Δεν είδα καμία ταινία.",
+    "back": "Я не посмотрел ни одного фильма.",
+    "note": "καμία — женский род в отрицании.",
+    "tags": ["indefinite", "negation", "kanenas", "feminine"]
+  },
+  {
+    "id": "indefinite-kapoia-affirmation-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Κάποια κοπέλα σε περιμένει έξω.",
+    "back": "Какая-то девушка ждёт тебя снаружи.",
+    "note": "κάποια — женский род в утверждении.",
+    "tags": ["indefinite", "affirmation", "kapoios", "feminine"]
+  },
+  {
+    "id": "indefinite-katholou-negation-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Δεν έχω καθόλου χρόνο.",
+    "back": "У меня совсем нет времени.",
+    "note": "καθόλου — «совсем не» в отрицании.",
+    "tags": ["indefinite", "negation", "katholou"]
+  },
+  {
+    "id": "indefinite-katholou-question-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Έχεις καθόλου χρόνο;",
+    "back": "У тебя есть хоть немного времени?",
+    "note": "καθόλου в вопросе — «хоть немного».",
+    "tags": ["indefinite", "question", "katholou"]
+  },
+  {
+    "id": "indefinite-ligo-affirmation-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Έχω λίγο χρόνο.",
+    "back": "У меня есть немного времени.",
+    "note": "λίγο — «немного» в утверждении.",
+    "tags": ["indefinite", "affirmation", "ligo"]
+  },
+  {
+    "id": "indefinite-pouthena-negation-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Δεν πήγα πουθενά.",
+    "back": "Я никуда не ходил.",
+    "note": "πουθενά — «никуда» в отрицании.",
+    "tags": ["indefinite", "negation", "pouthena"]
+  },
+  {
+    "id": "indefinite-pouthena-question-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Πήγες πουθενά το σαββατοκύριακο;",
+    "back": "Ты куда-нибудь ходил на выходных?",
+    "note": "πουθενά в вопросе — «куда-нибудь».",
+    "tags": ["indefinite", "question", "pouthena"]
+  },
+  {
+    "id": "indefinite-kapou-affirmation-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Πήγα κάπου.",
+    "back": "Я куда-то ходил.",
+    "note": "κάπου — «куда-то» в утверждении.",
+    "tags": ["indefinite", "affirmation", "kapou"]
+  },
+  {
+    "id": "indefinite-pote-negation-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Δεν πάω ποτέ στο θέατρο.",
+    "back": "Я никогда не хожу в театр.",
+    "note": "ποτέ — «никогда» в отрицании.",
+    "tags": ["indefinite", "negation", "pote"]
+  },
+  {
+    "id": "indefinite-pote-question-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Πας ποτέ στο θέατρο;",
+    "back": "Ты когда-нибудь ходишь в театр?",
+    "note": "ποτέ в вопросе — «когда-нибудь».",
+    "tags": ["indefinite", "question", "pote"]
+  },
+  {
+    "id": "indefinite-panta-affirmation-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Πάω πάντα στο θέατρο.",
+    "back": "Я всегда хожу в театр.",
+    "note": "πάντα — «всегда» в утверждении.",
+    "tags": ["indefinite", "affirmation", "panta"]
+  },
+  {
+    "id": "indefinite-kamia-fora-affirmation-01",
+    "rule_id": "indefinite-words-negation-affirmation",
+    "front": "Καμιά φορά πάω στο θέατρο.",
+    "back": "Иногда я хожу в театр.",
+    "note": "καμιά φορά — «иногда» в утверждении.",
+    "tags": ["indefinite", "affirmation", "kamia-fora"]
+  }
+]

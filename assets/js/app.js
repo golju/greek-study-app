@@ -1,6 +1,7 @@
 (() => {
   const DATA_URL = 'docs/greek-words.json';
   const RULES_URL = 'docs/greek-rules.json';
+  const CARDS_URL = 'docs/greek-rule-cards.json';
 
   const PERSON_ORDER = ['1sg', '2sg', '3sg', '1pl', '2pl', '3pl'];
   const PERSON_LABEL = {
@@ -22,6 +23,20 @@
     future: 'Будущее',
   };
   const REVEAL_SUBMODES = new Set(['lemma-ru', 'ru-lemma', 'name-form']);
+  const CATEGORY_LABEL = {
+    verbs: 'Глаголы',
+    nouns: 'Существительные',
+    articles: 'Артикли',
+    pronouns: 'Местоимения',
+    adjectives: 'Прилагательные',
+    adverbs: 'Наречия',
+    prepositions: 'Предлоги',
+    particles: 'Частицы',
+    numbers: 'Числительные',
+    syntax: 'Синтаксис',
+    phonology: 'Фонология',
+    vocabulary: 'Лексика',
+  };
 
   const state = {
     words: [],
@@ -44,6 +59,23 @@
       submode: 'list',
       list: { query: '' },
       cards: { order: [], idx: 0, revealed: false },
+      allCategories: [],
+      activeCategory: '',
+      tagsInCategory: [],
+      activeTags: new Set(),
+      ruleCards: {
+        loaded: false,
+        loading: false,
+        error: null,
+        items: [],
+        byRule: new Map(),
+      },
+      training: {
+        ruleId: null,
+        order: [],
+        idx: 0,
+        revealed: false,
+      },
     },
   };
 
@@ -445,8 +477,59 @@
 
   // ---------- Rules ----------
 
+  function collectFilterOptions() {
+    const r = state.rules;
+    const counts = new Map();
+    for (const rule of r.items) {
+      if (!rule.category) continue;
+      counts.set(rule.category, (counts.get(rule.category) ?? 0) + 1);
+    }
+    r.allCategories = [...counts.entries()]
+      .map(([category, count]) => ({ category, count }))
+      .sort((a, b) => b.count - a.count || a.category.localeCompare(b.category));
+  }
+
+  function recomputeTagsInCategory() {
+    const r = state.rules;
+    const counts = new Map();
+    for (const rule of r.items) {
+      if (r.activeCategory && rule.category !== r.activeCategory) continue;
+      for (const t of rule.tags || []) {
+        counts.set(t, (counts.get(t) ?? 0) + 1);
+      }
+    }
+    r.tagsInCategory = [...counts.entries()]
+      .map(([tag, count]) => ({ tag, count }))
+      .sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag));
+    for (const t of [...r.activeTags]) {
+      if (!counts.has(t)) r.activeTags.delete(t);
+    }
+  }
+
+  function ruleMatchesFilters(rule) {
+    const r = state.rules;
+    if (r.activeCategory && rule.category !== r.activeCategory) return false;
+    if (r.activeTags.size > 0) {
+      const tags = rule.tags || [];
+      if (!tags.some((t) => r.activeTags.has(t))) return false;
+    }
+    return true;
+  }
+
+  function getFilteredRules() {
+    return state.rules.items.filter(ruleMatchesFilters);
+  }
+
+  function getFilteredIndices() {
+    const out = [];
+    state.rules.items.forEach((rule, i) => {
+      if (ruleMatchesFilters(rule)) out.push(i);
+    });
+    return out;
+  }
+
   function rebuildRulesOrder() {
-    const idxs = state.rules.items.map((_, i) => i);
+    const idxs = getFilteredIndices();
     for (let i = idxs.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [idxs[i], idxs[j]] = [idxs[j], idxs[i]];
@@ -462,6 +545,7 @@
     r.loading = true;
     r.error = null;
     renderRules();
+    ensureRuleCardsLoaded();
     try {
       const res = await fetch(RULES_URL, { cache: 'no-cache' });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -469,6 +553,8 @@
       if (!Array.isArray(data)) throw new Error('Ожидался массив правил');
       r.items = data;
       r.loaded = true;
+      collectFilterOptions();
+      recomputeTagsInCategory();
       rebuildRulesOrder();
     } catch (err) {
       r.error = err.message;
@@ -476,6 +562,45 @@
       r.loading = false;
       renderRules();
     }
+  }
+
+  // Загружается «тихо»: ошибка не блокирует UI, просто не будет кнопки тренировки.
+  async function ensureRuleCardsLoaded() {
+    const rc = state.rules.ruleCards;
+    if (rc.loaded || rc.loading) return;
+    rc.loading = true;
+    rc.error = null;
+    try {
+      const res = await fetch(CARDS_URL, { cache: 'no-cache' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      if (!Array.isArray(data)) throw new Error('Ожидался массив карточек');
+      rc.items = data;
+      rc.byRule = indexRuleCards(data);
+      rc.loaded = true;
+    } catch (err) {
+      rc.error = err.message;
+      rc.items = [];
+      rc.byRule = new Map();
+    } finally {
+      rc.loading = false;
+      if (state.mode === 'rules') renderRules();
+    }
+  }
+
+  function indexRuleCards(items) {
+    const m = new Map();
+    for (const c of items) {
+      if (!c || !c.rule_id) continue;
+      const arr = m.get(c.rule_id) ?? [];
+      arr.push(c);
+      m.set(c.rule_id, arr);
+    }
+    return m;
+  }
+
+  function getCardsForRule(ruleId) {
+    return state.rules.ruleCards.byRule.get(ruleId) ?? [];
   }
 
   function renderBlocks(blocks) {
@@ -531,20 +656,94 @@
     return parts.filter(Boolean).join(' ').toLowerCase();
   }
 
+  function categoryLabel(cat) {
+    return CATEGORY_LABEL[cat] ?? cat;
+  }
+
+  function renderCategorySelect() {
+    const sel = $('#rules-category');
+    sel.replaceChildren();
+    const r = state.rules;
+    sel.appendChild(el('option', {
+      value: '',
+      text: `Все категории (${r.items.length})`,
+    }));
+    for (const { category, count } of r.allCategories) {
+      sel.appendChild(el('option', {
+        value: category,
+        text: `${categoryLabel(category)} (${count})`,
+      }));
+    }
+    sel.value = r.activeCategory;
+  }
+
+  function renderTagFilter() {
+    const box = $('#rules-tags');
+    box.replaceChildren();
+    const r = state.rules;
+    if (!r.activeCategory || !r.tagsInCategory.length) {
+      box.hidden = true;
+      return;
+    }
+    box.hidden = false;
+    box.appendChild(el('button', {
+      type: 'button',
+      class: 'tag-chip' + (r.activeTags.size === 0 ? ' is-active' : ''),
+      'data-tag': '',
+      text: 'Все',
+    }));
+    for (const { tag, count } of r.tagsInCategory) {
+      box.appendChild(el('button', {
+        type: 'button',
+        class: 'tag-chip' + (r.activeTags.has(tag) ? ' is-active' : ''),
+        'data-tag': tag,
+      },
+        el('span', { class: 'tag-chip__label', text: tag }),
+        el('span', { class: 'tag-chip__count', text: String(count) }),
+      ));
+    }
+  }
+
+  function hideRulesChrome({ alsoHideSubmode = false } = {}) {
+    $('#rules-search').hidden = true;
+    $('#rules-restart').hidden = true;
+    $('#rules-category-control').hidden = true;
+    $('#rules-tags').hidden = true;
+    $('#rules-submode-control').hidden = alsoHideSubmode;
+  }
+
+  function isTrainingActive() {
+    return state.rules.training.ruleId !== null;
+  }
+
+  function trainBtn(rule) {
+    const cards = getCardsForRule(rule.id);
+    if (!cards.length) return null;
+    return el('div', { class: 'rule-train' },
+      el('button', {
+        type: 'button',
+        class: 'card__btn card__btn--primary',
+        'data-action': 'train',
+        'data-rule-id': rule.id,
+        text: `Тренировать карточки (${cards.length})`,
+      }),
+    );
+  }
+
   function renderRules() {
     const status = $('#rules-status');
     const content = $('#rules-content');
+    const counter = $('#rules-counter');
+    const catControl = $('#rules-category-control');
     const search = $('#rules-search');
     const restart = $('#rules-restart');
-    const counter = $('#rules-counter');
     const r = state.rules;
 
     if (r.loading) {
       status.hidden = false;
       status.textContent = 'Загрузка правил…';
       content.replaceChildren();
-      search.hidden = true;
-      restart.hidden = true;
+      hideRulesChrome();
       counter.textContent = '';
       return;
     }
@@ -555,8 +754,7 @@
         `Создай файл (формат — в docs/prompt-rules.md) и убедись, ` +
         `что приложение открыто через статический сервер.`;
       content.replaceChildren();
-      search.hidden = true;
-      restart.hidden = true;
+      hideRulesChrome();
       counter.textContent = '';
       return;
     }
@@ -564,9 +762,30 @@
       status.hidden = false;
       status.textContent = 'Правил пока нет. Добавь их в docs/greek-rules.json.';
       content.replaceChildren();
-      search.hidden = true;
-      restart.hidden = true;
+      hideRulesChrome();
       counter.textContent = '';
+      return;
+    }
+
+    if (isTrainingActive()) {
+      status.hidden = true;
+      hideRulesChrome({ alsoHideSubmode: true });
+      renderTraining(content);
+      return;
+    }
+
+    catControl.hidden = false;
+    renderCategorySelect();
+    renderTagFilter();
+
+    const filteredCount = getFilteredRules().length;
+    if (!filteredCount) {
+      status.hidden = false;
+      status.textContent = 'По текущему фильтру правил не найдено. Сбросьте категорию или теги.';
+      content.replaceChildren();
+      search.hidden = r.submode !== 'list';
+      restart.hidden = r.submode !== 'cards';
+      counter.textContent = `0 / ${r.items.length}`;
       return;
     }
 
@@ -584,10 +803,11 @@
 
   function renderRulesList(content) {
     content.replaceChildren();
+    const base = getFilteredRules();
     const q = state.rules.list.query.trim().toLowerCase();
     const filtered = q
-      ? state.rules.items.filter((rule) => buildRuleHaystack(rule).includes(q))
-      : state.rules.items;
+      ? base.filter((rule) => buildRuleHaystack(rule).includes(q))
+      : base;
     $('#rules-counter').textContent = `${filtered.length} / ${state.rules.items.length}`;
 
     const ul = el('ul', { class: 'rules-list' });
@@ -601,6 +821,8 @@
       const badges = ruleBadges(rule);
       if (badges) details.appendChild(badges);
       details.appendChild(renderBlocks(rule.blocks));
+      const train = trainBtn(rule);
+      if (train) details.appendChild(train);
       li.appendChild(details);
       ul.appendChild(li);
     }
@@ -613,7 +835,7 @@
     const total = r.cards.order.length;
     $('#rules-counter').textContent = total
       ? `Карточка ${r.cards.idx + 1} / ${total}`
-      : '0 / 0';
+      : `0 / ${state.rules.items.length}`;
     if (!total) return;
 
     const rule = r.items[r.cards.order[r.cards.idx]];
@@ -637,6 +859,8 @@
     if (revealed) {
       card.appendChild(el('hr', { class: 'rule-divider' }));
       card.appendChild(renderBlocks(rule.blocks));
+      const train = trainBtn(rule);
+      if (train) card.appendChild(train);
     }
 
     card.appendChild(actions(
@@ -676,6 +900,161 @@
     state.rules.submode = sm;
     state.rules.cards.revealed = false;
     renderRules();
+  }
+
+  function changeCategory(cat) {
+    const r = state.rules;
+    r.activeCategory = cat;
+    r.activeTags.clear();
+    recomputeTagsInCategory();
+    rebuildRulesOrder();
+    renderRules();
+  }
+
+  function toggleTag(tag) {
+    const r = state.rules;
+    if (tag === '') {
+      r.activeTags.clear();
+    } else if (r.activeTags.has(tag)) {
+      r.activeTags.delete(tag);
+    } else {
+      r.activeTags.add(tag);
+    }
+    rebuildRulesOrder();
+    renderRules();
+  }
+
+  // ---------- Rules: training (example cards) ----------
+
+  function rebuildTrainingOrder() {
+    const t = state.rules.training;
+    const cards = getCardsForRule(t.ruleId);
+    const idxs = cards.map((_, i) => i);
+    for (let i = idxs.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [idxs[i], idxs[j]] = [idxs[j], idxs[i]];
+    }
+    t.order = idxs;
+    t.idx = 0;
+    t.revealed = false;
+  }
+
+  function startTraining(ruleId) {
+    const cards = getCardsForRule(ruleId);
+    if (!cards.length) return;
+    state.rules.training.ruleId = ruleId;
+    rebuildTrainingOrder();
+    renderRules();
+  }
+
+  function stopTraining() {
+    const t = state.rules.training;
+    t.ruleId = null;
+    t.order = [];
+    t.idx = 0;
+    t.revealed = false;
+    renderRules();
+  }
+
+  function nextTrainingCard() {
+    const t = state.rules.training;
+    if (!t.order.length) return;
+    t.idx = (t.idx + 1) % t.order.length;
+    t.revealed = false;
+    renderRules();
+  }
+
+  function toggleTrainingReveal() {
+    state.rules.training.revealed = !state.rules.training.revealed;
+    renderRules();
+  }
+
+  function restartTraining() {
+    rebuildTrainingOrder();
+    renderRules();
+  }
+
+  function findRuleById(id) {
+    return state.rules.items.find((r) => r.id === id) ?? null;
+  }
+
+  function renderTraining(content) {
+    content.replaceChildren();
+    const t = state.rules.training;
+    const rule = findRuleById(t.ruleId);
+    const cards = getCardsForRule(t.ruleId);
+    const total = cards.length;
+
+    if (!rule || !total) {
+      stopTraining();
+      return;
+    }
+
+    $('#rules-counter').textContent = `Карточка ${t.idx + 1} / ${total}`;
+
+    const card = cards[t.order[t.idx]];
+    const revealed = t.revealed;
+
+    const header = el('div', { class: 'rules-training__header' },
+      el('button', {
+        type: 'button',
+        class: 'btn-text',
+        'data-action': 'exit-training',
+        text: '← Назад к правилу',
+      }),
+      el('button', {
+        type: 'button',
+        class: 'btn-text rules-training__restart',
+        'data-action': 'restart-training',
+        text: 'Сначала',
+      }),
+    );
+    content.appendChild(header);
+
+    content.appendChild(el('h2', {
+      class: 'rules-training__title',
+      text: rule.title,
+    }));
+
+    const article = el('article', {
+      class: 'card card--training' + (revealed ? '' : ' card--clickable'),
+      on: { click: (e) => {
+        if (e.target.closest('button')) return;
+        if (!revealed) toggleTrainingReveal();
+      }},
+    });
+
+    article.appendChild(el('div', { class: 'card__stimulus', text: card.front }));
+
+    if (revealed) {
+      article.appendChild(el('div', { class: 'card__answer', text: card.back }));
+      if (card.note) {
+        article.appendChild(el('p', { class: 'rules-training__note', text: card.note }));
+      }
+      if (card.tags?.length) {
+        const tagsBox = el('div', { class: 'rules-training__tags' });
+        for (const tag of card.tags) {
+          tagsBox.appendChild(el('span', { class: 'badge', text: tag }));
+        }
+        article.appendChild(tagsBox);
+      }
+    } else {
+      article.appendChild(el('div', { class: 'card__answer card__answer--placeholder', text: '?' }));
+    }
+
+    article.appendChild(actions(
+      actionBtn(revealed ? 'Скрыть' : 'Показать перевод', toggleTrainingReveal, { primary: !revealed }),
+      actionBtn('Следующее →', nextTrainingCard),
+    ));
+
+    if (!revealed) {
+      article.appendChild(el('p', {
+        class: 'card__hint',
+        text: 'Подсказка: клик по карточке тоже показывает ответ.',
+      }));
+    }
+
+    content.appendChild(article);
   }
 
   // ---------- Mode switching ----------
@@ -723,6 +1102,32 @@
     $('#rules-search').addEventListener('input', (e) => {
       state.rules.list.query = e.target.value;
       renderRules();
+    });
+    $('#rules-category').addEventListener('change', (e) => changeCategory(e.target.value));
+    $('#rules-tags').addEventListener('click', (e) => {
+      const chip = e.target.closest('.tag-chip');
+      if (!chip) return;
+      toggleTag(chip.dataset.tag);
+    });
+    $('#rules-content').addEventListener('click', (e) => {
+      const trainEl = e.target.closest('[data-action="train"]');
+      if (trainEl) {
+        e.preventDefault();
+        startTraining(trainEl.dataset.ruleId);
+        return;
+      }
+      const exitEl = e.target.closest('[data-action="exit-training"]');
+      if (exitEl) {
+        e.preventDefault();
+        stopTraining();
+        return;
+      }
+      const restartEl = e.target.closest('[data-action="restart-training"]');
+      if (restartEl) {
+        e.preventDefault();
+        restartTraining();
+        return;
+      }
     });
   }
 
